@@ -19,8 +19,6 @@ internal class Quicksort
 
     private static int Partition(int left, int right, int[] nums)
     {
-        int n = nums.Length;
-
         // Random pivot
         int pivotIndex = _rng.Next(left, right + 1);
         int pivot = nums[pivotIndex];
