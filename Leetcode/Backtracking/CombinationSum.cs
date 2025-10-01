@@ -1,4 +1,4 @@
-﻿namespace Leetcode.Backtrackingj;
+﻿namespace Leetcode.Backtracking;
 
 class CombinationSum
 {

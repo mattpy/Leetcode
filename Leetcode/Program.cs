@@ -1,4 +1,4 @@
-﻿using Leetcode.Backtrackingj;
+﻿using Leetcode.Backtracking;
 
 namespace Leetcode
 {
