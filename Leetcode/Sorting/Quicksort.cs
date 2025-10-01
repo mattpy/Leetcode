@@ -11,7 +11,7 @@ internal class Quicksort
 
     private static void Qs(int left, int right, int[] nums)
     {
-        if (left > right) return;
+        if (left >= right) return;
         int p = Partition(left, right, nums);
         Qs(left, p - 1, nums);
         Qs(p + 1, right, nums);
