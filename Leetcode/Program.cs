@@ -1,4 +1,4 @@
-﻿using Leetcode.Backtracking;
+﻿using Leetcode.Sorting;
 
 namespace Leetcode
 {
@@ -6,7 +6,9 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            CombinationSum.Run();
+            int[] randomNums = { 5, 2, 3, 1, 4, 7, 9, 8, 6, 10 };
+            Quicksort.QuicksortImpl(randomNums);
+            Console.WriteLine(string.Join(", ", randomNums));
         }
     }
 }
