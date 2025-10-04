@@ -1,4 +1,6 @@
-﻿namespace Leetcode;
+﻿using Leetcode.Helpers;
+
+namespace Leetcode;
 
 class MergeKSortedLists
 {

@@ -4,7 +4,7 @@ public class CopyListWithRandomPointer
 {
     private Dictionary<Node, Node> _map = new();
 
-    public Node CopyRandomList(Node head)
+    public Node? CopyRandomList(Node? head)
     {
         if (head is null)
         {
