@@ -21,7 +21,7 @@ class RemoveNthNodeFromEndOfList
             fast = fast.next;
         }
 
-        slow.next = slow.next.next;
+        slow.next = slow!.next.next;
         return savedHead.next;
     }
 }
