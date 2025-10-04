@@ -4,7 +4,7 @@ namespace Leetcode.Trees;
 
 public class Solution
 {
-    public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
+    public TreeNode? LowestCommonAncestor(TreeNode? root, TreeNode? p, TreeNode? q)
     {
         if (root is null)
             return null;
