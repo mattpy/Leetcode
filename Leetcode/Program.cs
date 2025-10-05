@@ -6,7 +6,7 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            new TopKFrequentElements().Run();
+            new GroupAnagramsQuestion().Run();
         }
     }
 }
