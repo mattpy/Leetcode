@@ -1,4 +1,4 @@
-﻿using Leetcode.Sorting;
+﻿using Leetcode.Arrays;
 
 namespace Leetcode
 {
@@ -6,9 +6,7 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            int[] randomNums = { 5, 2, 3, 1, 4, 7, 9, 8, 6, 10 };
-            Quicksort.QuicksortImpl(randomNums);
-            Console.WriteLine(string.Join(", ", randomNums));
+            new TopKFrequentElements().Run();
         }
     }
 }
