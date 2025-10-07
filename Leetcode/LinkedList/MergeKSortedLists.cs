@@ -1,6 +1,6 @@
 ﻿using Leetcode.Helpers;
 
-namespace Leetcode;
+namespace Leetcode.LinkedList;
 
 class MergeKSortedLists
 {
