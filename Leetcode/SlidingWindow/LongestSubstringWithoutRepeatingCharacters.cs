@@ -16,8 +16,8 @@ public class LongestSubstringWithoutRepeatingCharacters
                 seen.Remove(s[left]);
                 left++;
             }
-            seen.Add(s[right]);
 
+            seen.Add(s[right]);
             max = Math.Max(max, right - left + 1);
         }
 
