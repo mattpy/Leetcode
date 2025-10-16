@@ -1,4 +1,4 @@
-﻿using Leetcode.Arrays;
+﻿using Leetcode.SlidingWindow;
 
 namespace Leetcode
 {
@@ -6,7 +6,7 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            new GroupAnagramsQuestion().Run();
+            new LongestRepeatingCharacterReplacement().CharacterReplacement("ABBB", 2);
         }
     }
 }
