@@ -23,7 +23,7 @@ public class LongestRepeatingCharacterReplacement
                 left++;
             }
 
-            result = right - left + 1;
+            result = Math.Max(result, right - left + 1);
         }
 
         return result;
