@@ -11,6 +11,11 @@ public class ImplementTriePrefixTree
         t.Insert("hello");
         Console.WriteLine(t.Search("hello"));
         Console.WriteLine(t.StartsWith("hel"));
+
+        t.Insert("toothbrush");
+        Console.WriteLine(t.Search("tooth"));
+        Console.WriteLine(t.Search("teetth"));
+        Console.WriteLine(t.StartsWith("too"));
     }
 }
 
