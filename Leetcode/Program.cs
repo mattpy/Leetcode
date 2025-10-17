@@ -1,4 +1,4 @@
-﻿using Leetcode.SlidingWindow;
+﻿using Leetcode.Tries;
 
 namespace Leetcode
 {
@@ -6,7 +6,7 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            new LongestRepeatingCharacterReplacement().CharacterReplacement("ABBB", 2);
+            new ImplementTriePrefixTree().Run();
         }
     }
 }
