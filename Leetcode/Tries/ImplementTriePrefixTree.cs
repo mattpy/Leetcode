@@ -33,7 +33,7 @@ public class Trie
     {
     }
 
-    public void Insert(string word)
+    public void Insert(ReadOnlySpan<char> word)
     {
         Node node = _root;
 
@@ -50,7 +50,7 @@ public class Trie
         node.IsEnd = true;
     }
 
-    public bool Search(string word)
+    public bool Search(ReadOnlySpan<char> word)
     {
         Node? node = _root;
 
@@ -65,7 +65,7 @@ public class Trie
         return node.IsEnd;
     }
 
-    public bool StartsWith(string prefix)
+    public bool StartsWith(ReadOnlySpan<char> prefix)
     {
         Node? node = _root;
 
