@@ -1,25 +1,25 @@
 ﻿namespace Leetcode.SlidingWindow;
 
-public class LongestRepeatingCharacterReplacement
+public class Leetcode424_LongestRepeatingCharacterReplacement
 {
     public int CharacterReplacement(string s, int k)
     {
-        Span<int> freq = stackalloc int[26];
-        int result = 0;
-        int left = 0;
+        Span<int> seen = stackalloc int[26];
         int maxFrequency = 0;
+        int result = 0;
 
+        int left = 0;
         for (int right = 0; right < s.Length; right++)
         {
             int index = s[right] - 'A';
-            freq[index]++;
+            seen[index]++;
 
-            maxFrequency = Math.Max(maxFrequency, freq[index]);
+            maxFrequency = Math.Max(maxFrequency, seen[index]);
 
-            while ((right - left + 1) - maxFrequency > k)
+            if ((right - left + 1) - maxFrequency > k)
             {
                 int leftIndex = s[left] - 'A';
-                freq[leftIndex]--;
+                seen[leftIndex]--;
                 left++;
             }
 

@@ -1,8 +1,10 @@
 ﻿using static Leetcode.SlidingWindow.Leetcode567_PermutationInString;
 
-namespace Leetcode
+namespace Leetcode;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
         static void Main(string[] args)
         {
