@@ -4,9 +4,12 @@ class Leetcode567_PermutationInString
 {
     public static bool CheckInclusion(string s1, string s2)
     {
-        Dictionary<char, int> d1 = s1
-            .Distinct()
-            .ToDictionary(k => k, v => s1.Count(x => x == v));
+        Dictionary<char, int> d1 = new();
+        foreach (char c in s1)
+        {
+            d1.TryGetValue(c, out int value);
+            d1[c] = value + 1;
+        }
 
         Dictionary<char, int> d2 = new();
 
