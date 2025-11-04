@@ -39,14 +39,6 @@ class Leetcode567_PermutationInString
         return false;
     }
 
-    private static void PrintDictionary<TKey, TValue>(Dictionary<TKey, TValue> d)
-    {
-        foreach (var (key, value) in d)
-        {
-            Console.WriteLine($"{key} - {value}");
-        }
-    }
-
     private static bool AreDictionariesEqual<TKey, TValue>(
         Dictionary<TKey, TValue> d1,
         Dictionary<TKey, TValue> d2)
