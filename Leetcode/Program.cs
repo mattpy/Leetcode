@@ -1,4 +1,4 @@
-﻿using Leetcode.Tries;
+﻿using static Leetcode.SlidingWindow.Leetcode567_PermutationInString;
 
 namespace Leetcode
 {
@@ -6,7 +6,8 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            new ImplementTriePrefixTree().Run();
+            bool result = CheckInclusion("abcdxabcde", "abcdeabcdx");
+            Console.WriteLine(result);
         }
     }
 }
