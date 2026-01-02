@@ -1,15 +1,12 @@
-﻿using static Leetcode.SlidingWindow.Leetcode567_PermutationInString;
+﻿namespace Leetcode;
 
-namespace Leetcode;
+using Leetcode.Strings;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            bool result = CheckInclusion("abcdxabcde", "abcdeabcdx");
-            Console.WriteLine(result);
-        }
+        string result = ZigzagConversion.Convert("PAYPALISHIRING", 3);
+        Console.WriteLine(result);
     }
 }
