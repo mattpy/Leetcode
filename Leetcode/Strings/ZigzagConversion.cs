@@ -8,8 +8,9 @@ public class ZigzagConversion
     {
         if (numRows == 1 || numRows >= s.Length) return s;
 
-        IList<IList<char>> letters = new List<IList<char>>(numRows);
-        for (int i = 0; i < numRows; i++) letters.Add(new List<char>());
+        List<List<char>> letters = Enumerable.Range(0, numRows)
+            .Select(_ => new List<char>())
+            .ToList();
 
         bool isGoingDown = true;
         int verticalPosition = 0;
