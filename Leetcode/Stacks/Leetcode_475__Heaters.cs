@@ -16,7 +16,7 @@ public class Leetcode_475__Heaters
         {
             int house = houses[i];
 
-            while (stack.Count > 0 && house < stack.Peek())
+            while (stack.Count > 0 && house <= stack.Peek())
             {
                 rightHeater = stack.Pop();
             }
@@ -29,6 +29,27 @@ public class Leetcode_475__Heaters
             {
                 minRadius = Math.Max(minRadius, Math.Min(Math.Abs(house - stack.Peek()), Math.Abs(house - rightHeater)));
             }
+        }
+
+        return minRadius;
+    }
+
+    public static int FindRadiusTwoPointer(int[] houses, int[] heaters)
+    {
+        Array.Sort(houses);
+        Array.Sort(heaters);
+
+        int minRadius = 0;
+        int heaterIdx = 0;
+
+        foreach (int house in houses)
+        {
+            while (heaterIdx + 1 < heaters.Length && Math.Abs(heaters[heaterIdx + 1] - house) <= Math.Abs(heaters[heaterIdx] - house))
+            {
+                heaterIdx++;
+            }
+
+            minRadius = Math.Max(minRadius, Math.Abs(heaters[heaterIdx] - house));
         }
 
         return minRadius;
