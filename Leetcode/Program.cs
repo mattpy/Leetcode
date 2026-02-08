@@ -1,6 +1,4 @@
-﻿using Leetcode.DynamicProgramming;
-
-namespace Leetcode;
+﻿namespace Leetcode;
 
 internal class Program
 {
