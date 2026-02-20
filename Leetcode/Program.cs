@@ -1,4 +1,5 @@
-﻿using Leetcode.BinarySearch;
+﻿using Leetcode.Helpers;
+using Leetcode.LinkedList;
 
 namespace Leetcode;
 
@@ -6,8 +7,11 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        int[] nums = { 1, 1, 1, 2, 2, 2, 2, 2, 3, 4, 5 };
-        int target = 1;
-        Leetcode_34__Find_First_And_Last_Position.SearchRange(nums, target);
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+
+        Leetcode__143__Reorder_List.ReorderList(head);
     }
 }
