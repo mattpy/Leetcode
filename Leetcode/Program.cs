@@ -7,11 +7,22 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
+        ListNode l1 = new(1);
+        l1.next = new(3);
+        l1.next.next = new(7);
+        l1.next.next.next = new(11);
 
-        Leetcode__143__Reorder_List.ReorderList(head);
+        ListNode l2 = new(2);
+        l2.next = new(4);
+        l2.next.next = new(4);
+        l2.next.next.next = new(10);
+
+        var result = Leetcode_21__Merge_Two_Sorted_Lists.MergeTwoLists(l1, l2);
+
+        while (result is not null)
+        {
+            Console.WriteLine(result.val);
+            result = result.next;
+        }
     }
 }
