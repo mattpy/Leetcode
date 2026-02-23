@@ -21,60 +21,59 @@ public class ImplementTriePrefixTree
 
 public class Trie
 {
-    private class Node
+    class Node
     {
         public Dictionary<char, Node> Children = new();
         public bool IsEnd { get; set; }
     }
 
-    private Node _root = new();
+    private readonly Node _root;
 
     public Trie()
     {
+        _root = new();
     }
 
-    public void Insert(ReadOnlySpan<char> word)
+    public void Insert(string word)
     {
-        Node node = _root;
+        Node current = _root;
 
         foreach (char c in word)
         {
-            if (!node.Children.TryGetValue(c, out Node? next))
-            {
-                next = new();
-                node.Children[c] = next;
-            }
-            node = next;
+            current.Children.TryAdd(c, new Node());
+            current = current.Children[c];
         }
 
-        node.IsEnd = true;
+        current.IsEnd = true;
     }
 
-    public bool Search(ReadOnlySpan<char> word)
+    public bool Search(string word)
     {
-        Node? node = _root;
+        Node current = _root;
 
         foreach (char c in word)
         {
-            if (!node.Children.TryGetValue(c, out node))
+            if (!current.Children.TryGetValue(c, out Node? node))
             {
                 return false;
             }
+            current = node;
         }
 
-        return node.IsEnd;
+        return current.IsEnd;
     }
 
-    public bool StartsWith(ReadOnlySpan<char> prefix)
+    public bool StartsWith(string prefix)
     {
-        Node? node = _root;
+        Node current = _root;
 
         foreach (char c in prefix)
         {
-            if (!node.Children.TryGetValue(c, out node))
+            if (!current.Children.TryGetValue(c, out Node? node))
             {
                 return false;
             }
+            current = node;
         }
 
         return true;
